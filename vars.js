@@ -10,7 +10,7 @@ let SmileFaceCalin = {
 let SmileFaceTimo = {
     x: 180,
     y: 50,
-    speed:3,
+    speed:6,
     ray:20,
     sensX:1,
     sensY:1
