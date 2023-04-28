@@ -7,6 +7,16 @@ let smileFaceCalin = {
     sensY:1
 }
 
+let smileFaceTimo = {
+    x: 180,
+    y: 50,
+    speed:3,
+    ray:20,
+    sensX:1,
+    sensY:1
+
+}
+
 let moveS1X = 180;
 let moveS1Y = 50;
 let speedS1 =5;
