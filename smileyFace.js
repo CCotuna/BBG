@@ -44,10 +44,11 @@ function smileFaceTimo(x, y, d) {
     }
 
 function senseSmileyFaceCheckY(y, ray, s) {
+      //verificare limita TOP
       if (y < limitTop + ray) {
          return 1; //schimbare de sens
       }
-      //verificare limmita Bottom S1
+      //verificare limmita Bottom 
       if (y > limitBottom - ray) {
         return -1; //schimbare de sens
       }
@@ -57,11 +58,11 @@ function senseSmileyFaceCheckY(y, ray, s) {
 
 
 function senseSmileyFaceCheckX(x, ray, s) {
- //verificare limmita Left S1
+ //verificare limmita Left 
  if (x < limitLeft + ray) {
     return 1; //schimbare de sens
   }
-  //verificare limmita Right S1
+  //verificare limmita Right 
   if (x > limitRight - ray) {
     return -1; //schimbare de sens
 }
