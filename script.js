@@ -7,16 +7,16 @@ function draw() {
   sensS1X = senseSmileyFaceCheckX(moveS1X,  rayS1, sensS1X);
   sensS1Y = senseSmileyFaceCheckY(moveS1Y,  rayS1, sensS1Y);
 
-  smileFaceCalin.sensX = senseSmileyFaceCheckX(smileFaceCalin.x,  smileFaceCalin.ray, smileFaceCalin.x);
-  smileFaceCalin.sensY = senseSmileyFaceCheckY(smileFaceCalin.y,  smileFaceCalin.ray, smileFaceCalin.y);
+  SmileFaceCalin.sensX = senseSmileyFaceCheckX(SmileFaceCalin.x,  SmileFaceCalin.ray, SmileFaceCalin.sensX);
+  SmileFaceCalin.sensY = senseSmileyFaceCheckY(SmileFaceCalin.y,  SmileFaceCalin.ray, SmileFaceCalin.sensY);
 
   moveS1X += sensS1X * speedS1;
   moveS1Y += sensS1Y * speedS1;
 
-  smileFaceCalin.x += smileFaceCalin.sensX * smileFaceCalin.speed;
-  smileFaceCalin.y += smileFaceCalin.sensY * smileFaceCalin.speed;
+  SmileFaceCalin.x += SmileFaceCalin.sensX * SmileFaceCalin.speed;
+  SmileFaceCalin.y += SmileFaceCalin.sensY * SmileFaceCalin.speed;
 
   smileFaceTimo(moveS1X, moveS1Y, rayS1 * 2);
-  smileFaceCalin(smileFaceCalin.x, smileFaceCalin.y, smileFaceCalin.ray *2);
+  smileFaceCalin(SmileFaceCalin.x, SmileFaceCalin.y, SmileFaceCalin.ray *2);
 }
 

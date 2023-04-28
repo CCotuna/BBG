@@ -1,4 +1,4 @@
-let smileFaceCalin = {
+let SmileFaceCalin = {
     x: 180,
     y: 50,
     speed:3,
