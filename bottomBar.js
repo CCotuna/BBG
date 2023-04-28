@@ -1,6 +1,6 @@
 function bottomBar() {
   //color
-  fill("#121212");
+  fill("white");
   rect(
     mouseX - Math.round(BottomBar.width / 2),
     BottomBar.bottomYPosition,

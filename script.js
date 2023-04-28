@@ -1,13 +1,16 @@
 function setup() {
   createCanvas(600, 600);
+
+  initBricks();
 }
 
 function draw() {
-  background("white");
+  background("darkred");
 
   SmileFaceCalin.sensX = senseSmileyFaceCheckX(SmileFaceCalin.x,  SmileFaceCalin.ray, SmileFaceCalin.sensX);
   SmileFaceCalin.sensY = senseSmileyFaceCheckY(SmileFaceCalin.y,  SmileFaceCalin.ray, SmileFaceCalin.sensY);
   SmileFaceCalin.sensY = bottomBarChecks(SmileFaceCalin);
+  SmileFaceCalin.sensY = bricksCheck(SmileFaceCalin);
 
   SmileFaceTimo.sensX = senseSmileyFaceCheckX(SmileFaceTimo.x,  SmileFaceTimo.ray, SmileFaceTimo.sensX);
   SmileFaceTimo.sensY = senseSmileyFaceCheckY(SmileFaceTimo.y,  SmileFaceTimo.ray, SmileFaceTimo.sensY);
@@ -24,5 +27,6 @@ function draw() {
   smileFaceCalin(SmileFaceCalin.x, SmileFaceCalin.y, SmileFaceCalin.ray *2);
 
   bottomBar();
+  showBricks();
 }
 

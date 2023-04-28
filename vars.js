@@ -1,3 +1,5 @@
+let bricks = [];
+
 let SmileFaceCalin = {
     x: 180,
     y: 50,
