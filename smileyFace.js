@@ -49,10 +49,9 @@ function senseSmileyFaceCheckY(y, ray, s) {
          return 1; //schimbare de sens
       }
       //verificare limmita Bottom 
-      if (y > limitBottom - ray) {
-        return -1; //schimbare de sens
-      }
-      
+      // if (y > limitBottom - ray) {
+      //   return -1; //schimbare de sens
+      // }
       return s;
 }
 
