@@ -1,18 +1,18 @@
 let bricks = [];
 
 let SmileFaceCalin = {
-    x: 180,
-    y: 50,
-    speed:6,
+    x: 300,
+    y: 200,
+    speed:4,
     ray:20,
     sensX:1,
     sensY:1
 }
 
 let SmileFaceTimo = {
-    x: 180,
-    y: 50,
-    speed:4,
+    x: 300,
+    y: 200,
+    speed:5,
     ray:20,
     sensX:1,
     sensY:1
