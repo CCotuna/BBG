@@ -1,11 +1,12 @@
 function showBricks() {
     for(let i = 0; i < bricks.length; i++){
-        if(!bricks[i].hit){
+        // if(!bricks[i].hit){
+        // fill(bricks[i].color);
+        // }
+        // else{
+        //     fill("yellow");
+        // }
         fill(bricks[i].color);
-        }
-        else{
-            fill("yellow");
-        }
         rect(bricks[i].x, bricks[i].y, bricks[i].width, bricks[i].height);
 
 
@@ -17,7 +18,7 @@ function showBricks() {
 }
 
 function initBricks() {
-
+    bricks = [];
     const marginLeft = 20;
     const marginRight = 20;
     const bricksNumber = 10;
@@ -48,10 +49,13 @@ function bricksCheck(smileFace) {
         if(bricks[i].x <= smileFace.x + smileFace.ray && 
            bricks[i].x + bricks[i].width >= smileFace.x - smileFace.ray &&
            bricks[i].y <= smileFace.y + smileFace.ray &&
-           bricks[i].y + bricks[i].height >= smileFace.y - smileFace.ray &&
-           !bricks[i].hit)
+           bricks[i].y + bricks[i].height >= smileFace.y - smileFace.ray )
         {
-            bricks[i].hit = true;
+            bricks.splice(i, 1);
+            if(bricks.length == 0){
+                levelUp();
+            }
+            
             smileFace.speed++;
             return 1;
         }

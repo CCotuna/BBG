@@ -3,20 +3,20 @@ let numberOfRows = 1;
 
 let SmileFaceCalin = {
     x: 300,
-    y: 200,
+    y: 555,
     speed:4,
     ray:20,
-    sensX:1,
-    sensY:1
+    sensX:-1,
+    sensY:-1
 }
 
 let SmileFaceTimo = {
     x: 300,
-    y: 200,
+    y: 565,
     speed:5,
     ray:20,
     sensX:1,
-    sensY:1
+    sensY:-1
 
 }
 
