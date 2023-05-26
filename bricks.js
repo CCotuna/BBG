@@ -52,6 +52,7 @@ function bricksCheck(smileFace) {
            !bricks[i].hit)
         {
             bricks[i].hit = true;
+            smileFace.speed++;
             return 1;
         }
     }

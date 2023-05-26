@@ -7,6 +7,9 @@ function setup() {
 function draw() {
   background("darkred");
 
+  text(`Level Speed Smileface: ${SmileFaceCalin.speed}`, 10, 10)
+  text(`Level Speed Smileface : ${SmileFaceTimo.speed}`, 10, 30)
+
   SmileFaceCalin.sensX = senseSmileyFaceCheckX(SmileFaceCalin.x,  SmileFaceCalin.ray, SmileFaceCalin.sensX);
   SmileFaceCalin.sensY = senseSmileyFaceCheckY(SmileFaceCalin.y,  SmileFaceCalin.ray, SmileFaceCalin.sensY);
   SmileFaceCalin.sensY = bottomBarChecks(SmileFaceCalin);
@@ -31,3 +34,24 @@ function draw() {
   showBricks();
 }
 
+function reset(){
+  initBricks();
+
+  SmileFaceCalin.x = 300;
+  SmileFaceTimo.y = 300;
+  SmileFaceCalin.y = 300; 
+  SmileFaceTimo.x = 300;
+  
+  bottomBar();
+  showBricks();
+}
+
+function levelUp(){
+  SmileFaceCalin.speed++;
+  SmileFaceTimo.speed++;
+}
+
+function levelDown(){
+  SmileFaceCalin.speed--;
+  SmileFaceTimo.speed--;
+}
