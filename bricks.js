@@ -28,12 +28,16 @@ function initBricks() {
 
 function bricksCheck(smileFace) {
     for (let i = 0; i < bricks.length; i++) { 
-        if(bricks[i].x >= smileFace.x + smileFace.ray && 
-           bricks[i].x <= smileFace.x-smileFace.ray &&
-           bricks[i].y <= smileFace.y -smileFace.ray){
-            return 1;
-        }
-    }
+        if (
+            smileFace.y + smileFace.ray >= BottomBar.bottomYPosition &&
+            smileFace.y + smileFace.ray < limitBottom &&
+            smileFace.x + smileFace.ray > mouseX - Math.round(BottomBar.width / 2) &&
+            smileFace.x - smileFace.ray < mouseX + Math.round(BottomBar.width / 2)
+          ) {
+            return -1;
+          }
+        
     return smileFace.sensY;
 }
 
+}
