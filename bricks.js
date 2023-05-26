@@ -1,7 +1,9 @@
 function showBricks() {
     for(let i = 0; i < bricks.length; i++){
+        if(!bricks[i].hit){
         fill(bricks[i].color);
         rect(bricks[i].x, bricks[i].y, bricks[i].width, bricks[i].height);
+        }
     }
 }
 
@@ -22,22 +24,23 @@ function initBricks() {
             y: 40,
             width: brickWidth,
             height: 15,
+            hit: 0
          })
     }
 }
 
 function bricksCheck(smileFace) {
     for (let i = 0; i < bricks.length; i++) { 
-        if (
-            smileFace.y + smileFace.ray >= BottomBar.bottomYPosition &&
-            smileFace.y + smileFace.ray < limitBottom &&
-            smileFace.x + smileFace.ray > mouseX - Math.round(BottomBar.width / 2) &&
-            smileFace.x - smileFace.ray < mouseX + Math.round(BottomBar.width / 2)
-          ) {
-            return -1;
-          }
-        
+        if(bricks[i].x <= smileFace.x + smileFace.ray && 
+           bricks[i].x + bricks[i].width >= smileFace.x - smileFace.ray &&
+           bricks[i].y <= smileFace.y -smileFace.ray &&
+           bricks[i].y + bricks[i].height >= smileFace.y - smileFace.ray &&
+           !bricks[i].hit)
+        {
+            bricks[i].hit = true;
+            return 1;
+        }
+    }
     return smileFace.sensY;
 }
 
-}

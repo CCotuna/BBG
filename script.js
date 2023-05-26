@@ -15,6 +15,7 @@ function draw() {
   SmileFaceTimo.sensX = senseSmileyFaceCheckX(SmileFaceTimo.x,  SmileFaceTimo.ray, SmileFaceTimo.sensX);
   SmileFaceTimo.sensY = senseSmileyFaceCheckY(SmileFaceTimo.y,  SmileFaceTimo.ray, SmileFaceTimo.sensY);
   SmileFaceTimo.sensY = bottomBarChecks(SmileFaceTimo);
+  SmileFaceTimo.sensY = bricksCheck(SmileFaceTimo);
   
 
   SmileFaceCalin.x += SmileFaceCalin.sensX * SmileFaceCalin.speed;
