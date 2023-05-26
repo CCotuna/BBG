@@ -2,8 +2,17 @@ function showBricks() {
     for(let i = 0; i < bricks.length; i++){
         if(!bricks[i].hit){
         fill(bricks[i].color);
-        rect(bricks[i].x, bricks[i].y, bricks[i].width, bricks[i].height);
         }
+        else{
+            fill("yellow");
+        }
+        rect(bricks[i].x, bricks[i].y, bricks[i].width, bricks[i].height);
+
+
+        // if(!bricks[i].hit){
+        //     fill(bricks[i].color);
+        //     rect(bricks[i].x, bricks[i].y, bricks[i].width, bricks[i].height);
+        //     }
     }
 }
 
