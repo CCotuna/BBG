@@ -28,9 +28,11 @@ function initBricks() {
 
 function bricksCheck(smileFace) {
     for (let i = 0; i < bricks.length; i++) { 
-        if(bricks[i].x >= smileFace.x + smileFace.ray && 
-           bricks[i].x <= smileFace.x-smileFace.ray &&
-           bricks[i].y <= smileFace.y -smileFace.ray){
+        if(bricks[i].x <= smileFace.x + smileFace.ray && 
+           bricks[i].x + bricks[i].width >= smileFace.x - smileFace.ray &&
+           bricks[i].y <= smileFace.y -smileFace.ray &&
+           bricks[i].y + bricks[i].height >= smileFace.y - smileFace.ray)
+        {
             return 1;
         }
     }

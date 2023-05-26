@@ -20,7 +20,6 @@ function smileFaceTimo(x, y, d) {
     arc(x, y +d*0.30 ,d*0.40, d*0.10, 0, Math.PI);
   }
   
-  
   function smileFaceCalin(x, y, d) {
       //skin
       fill("red");
