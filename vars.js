@@ -1,4 +1,5 @@
 let bricks = [];
+let numberOfRows = 1;
 
 let SmileFaceCalin = {
     x: 300,

@@ -26,7 +26,7 @@ function initBricks() {
 
     const brickWidth = Math.round(bricksZone/bricksNumber) - bricksDistance;
 
-for(let k = 1; k <= 3; k++){
+for(let k = 1; k <= numberOfRows; k++){
 
     for (let i = 0; i < bricksNumber; i++) {
         bricks.push({

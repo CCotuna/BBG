@@ -47,11 +47,12 @@ function reset(){
 }
 
 function levelUp(){
-  SmileFaceCalin.speed++;
-  SmileFaceTimo.speed++;
+  if(numberOfRows < 6)
+  numberOfRows++;
+  initBricks();
 }
 
 function levelDown(){
-  SmileFaceCalin.speed--;
-  SmileFaceTimo.speed--;
+  if(numberOfRows > 1)
+  numberOfRows--;
 }
